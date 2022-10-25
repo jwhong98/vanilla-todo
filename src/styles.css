@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 15% 1fr;
+  grid-template-rows: 15% 1fr;
+}
+
+.header {
+  color: red;
+  grid-area: 1 / 1 / 2 / 3;
+  background-color: grey;
+}
+
+.sidebar {
+  background-color: lightgrey;
+}
+
+#content {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
