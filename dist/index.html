@@ -7,18 +7,32 @@
     <title>Document</title>
   </head>
   <body>
+    <div class="formContainer">
+        <form action="/">
+            <input id="title" name="title" type="text" placeholder="Todo Title" />
+              <textarea
+                name="description"
+                id="description"
+                cols="30"
+                rows="10"
+                placeholder="Description"
+              ></textarea>
+              <input type="date" name="dueDate" id="dueDate">
+              <div class="priorityContainer">
+                <p>Priority</p>
+                <label for="lowPrio">Low</label>
+                <input type="radio" name="prio" id="lowPrio" value="low">
+                <label for="medPrio">Medium</label>
+                <input type="radio" name="prio" id="medPrio" value="med">
+                <label for="highPrio">High</label>
+                <input type="radio" name="prio" id="highPrio" value="high">
+              </div>
+              <button type="submit" class="submit">Add Todo</button>
+            </div>
+          </form>
+    </div>
     <div id="content">
-      <form action="/">
-        <input id="title" name="title" type="text" placeholder="Todo Title" />
-          <textarea
-            name="description"
-            id="description"
-            cols="30"
-            rows="10"
-            placeholder="Description"
-          ></textarea>
-        </div>
-      </form>
+      <button class="addTodo">Add Todo</button>
     </div>
     <script src="./index.bundle.js"></script>
   </body>
