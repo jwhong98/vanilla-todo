@@ -1,21 +1,17 @@
 import createHeader from "./createHeader";
 import createSidebar from "./createSidebar";
 import createTodo from "./createTodo";
-import createTodoCard from "./createTodoCard";
+import displayTodos from "./displayTodos";
 import "./styles.css";
 
 createHeader();
 createSidebar();
 
-const content = document.querySelector("#content");
+const display = document.querySelector("#display");
 const todoList = [];
 const form = document.querySelector(".formContainer");
 const addTodo = document.querySelector(".addTodo");
 const submitButton = document.querySelector(".submit");
-
-const displayTodos = () => {
-  todoList.map((el, i) => createTodoCard(el, i));
-};
 
 addTodo.addEventListener("click", () => {
   form.classList.toggle("active");
@@ -30,6 +26,7 @@ submitButton.addEventListener("click", (e) => {
   let priority = document.querySelector('input[name="prio"]:checked').value;
   let newTodo = createTodo(title, description, dueDate, priority);
   todoList.push(newTodo);
-  displayTodos();
+  displayTodos(todoList);
+  document.getElementById("form").reset(); //clear form inputs
   form.classList.toggle("active");
 });
