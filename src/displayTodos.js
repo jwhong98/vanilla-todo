@@ -5,5 +5,5 @@ export default function displayTodos(project) {
   while (display.firstChild) {
     display.removeChild(display.firstChild);
   }
-  project.map((el, i) => display.appendChild(createTodoCard(el, i)));
+  project.map((el, i) => display.appendChild(createTodoCard(el, i, project)));
 }

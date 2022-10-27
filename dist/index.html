@@ -17,22 +17,27 @@
                 rows="10"
                 placeholder="Description"
               ></textarea>
+              <label for="dueDate">Complete by:</label>
               <input type="date" name="dueDate" id="dueDate">
               <div class="priorityContainer">
-                <p>Priority</p>
+                <p>Priority:</p>
                 <label for="lowPrio">Low</label>
-                <input type="radio" name="prio" id="lowPrio" value="low">
+                <input type="radio" name="prio" id="lowPrio" value="Low">
                 <label for="medPrio">Medium</label>
-                <input type="radio" name="prio" id="medPrio" value="med">
+                <input type="radio" name="prio" id="medPrio" value="Medium">
                 <label for="highPrio">High</label>
-                <input type="radio" name="prio" id="highPrio" value="high">
+                <input type="radio" name="prio" id="highPrio" value="High">
               </div>
-              <button type="submit" class="submit">Add Todo</button>
+              <div class="buttonWrap">
+                <button type="submit" class="submit button">Add Todo</button>
+                <button type="button" class="cancelBtn button">Cancel</button>
+              </div>
+              
             </div>
           </form>
     </div>
     <div id="content">
-      <button class="addTodo">Add Todo</button>
+      <button class="addTodo button">Add Todo</button>
       <div id="display"></div>
     </div>
     <script src="./index.bundle.js"></script>
