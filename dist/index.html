@@ -17,27 +17,31 @@
                 rows="10"
                 placeholder="Description"
               ></textarea>
-              <label for="dueDate">Complete by:</label>
-              <input type="date" name="dueDate" id="dueDate">
-              <div class="priorityContainer">
+              <div class="inputContainer">
+                <label for="dueDate">Complete by:</label>
+                <input type="date" name="dueDate" id="dueDate">
+              </div>
+              <div class="inputContainer">
                 <p>Priority:</p>
-                <label for="lowPrio">Low</label>
-                <input type="radio" name="prio" id="lowPrio" value="Low">
-                <label for="medPrio">Medium</label>
-                <input type="radio" name="prio" id="medPrio" value="Medium">
-                <label for="highPrio">High</label>
-                <input type="radio" name="prio" id="highPrio" value="High">
+                <div>
+                  <input type="radio" class="btn-check" name="prio" id="lowPrio" value="Low">
+                  <label class="btn btn-outline-success" for="lowPrio">Low</label>
+                  <input type="radio" class="btn-check" name="prio" id="medPrio" value="Medium">
+                  <label class="btn btn-outline-warning" for="medPrio">Medium</label>
+                  <input type="radio" class="btn-check" name="prio" id="highPrio" value="High">
+                  <label class="btn btn-outline-danger" for="highPrio">High</label>
+                </div>
               </div>
               <div class="buttonWrap">
-                <button type="submit" class="submit button">Add Todo</button>
-                <button type="button" class="cancelBtn button">Cancel</button>
+                <button type="submit" class="submit btn btn-outline-primary">Add Todo</button>
+                <button type="button" class="cancelBtn btn btn-outline-primary">Cancel</button>
               </div>
               
             </div>
           </form>
     </div>
     <div id="content">
-      <button class="addTodo button">Add Todo</button>
+      <button class="addTodo btn btn-outline-primary">Add Todo</button>
       <div id="display"></div>
     </div>
     <script src="./index.bundle.js"></script>

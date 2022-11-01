@@ -2,23 +2,34 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
 }
 
 body {
   height: 100vh;
   display: grid;
-  grid-template-columns: 15% 1fr;
+  grid-template-columns: max(15%, 200px) 1fr;
   grid-template-rows: 15% 1fr;
 }
 
 .header {
-  color: red;
   grid-area: 1 / 1 / 2 / 3;
   background-color: grey;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 2.5rem;
 }
 
 .sidebar {
   background-color: lightgrey;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 #content {
@@ -36,6 +47,7 @@ body {
   outline: none;
   border: none;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .formContainer {
@@ -48,7 +60,8 @@ body {
   transform: translate(-50%, -50%);
   width: 500px;
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid grey;
+  border-radius: 5px;
 }
 
 form {
@@ -58,13 +71,38 @@ form {
   gap: 10px;
 }
 
+form > input {
+  font-size: 20px;
+}
+
 #title,
 #description {
   width: 100%;
   padding: 5px;
+  border: 1px solid lightgray;
 }
 
-.priorityContainer {
+#description {
+  resize: none;
+  font-size: 1rem;
+}
+
+.inputContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputContainer > p {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.inputContainer > label {
+  /* font-weight: 700; */
+}
+
+.inputContainer > div {
   display: flex;
   gap: 10px;
 }

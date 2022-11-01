@@ -22,6 +22,7 @@ export default function createTodoCard(todoItem, i, todoList) {
 
   const toggleComplete = document.createElement("button");
   toggleComplete.textContent = "Status";
+  toggleComplete.classList.add("button");
   toggleComplete.addEventListener("click", () => {
     setComplete(todoItem);
     complete.textContent = todoItem.isComplete ? "Complete" : "Incomplete";
@@ -29,6 +30,7 @@ export default function createTodoCard(todoItem, i, todoList) {
 
   const remove = document.createElement("button");
   remove.textContent = "Remove";
+  remove.classList.add("button");
   remove.addEventListener("click", () => {
     removeTodo(todoList, i);
   });

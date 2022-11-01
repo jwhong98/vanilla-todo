@@ -3,6 +3,8 @@ import createSidebar from "./createSidebar";
 import createTodo from "./createTodo";
 import displayTodos from "./displayTodos";
 import "./styles.css";
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 createHeader();
 createSidebar();
