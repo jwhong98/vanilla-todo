@@ -1,11 +1,10 @@
-export default function createTodo(title, disc, dueDate, priority, project) {
-  project ? project : "";
+export default function createTodo(title, desc, dueDate, priority, project) {
   return {
     title,
-    disc,
+    desc: desc || "No Description",
     dueDate,
     priority,
-    project: project ? project : "",
+    project: project || "",
     isComplete: false,
   };
 }

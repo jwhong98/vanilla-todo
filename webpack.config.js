@@ -6,7 +6,6 @@ module.exports = {
     index: "./src/index.js",
     changePriority: "./src/changePriority.js",
     createTodo: "./src/createTodo.js",
-    createProject: "./src/createProject.js",
     setComplete: "./src/setComplete.js",
     createHeader: "./src/createHeader.js",
     createSidebar: "./src/createSidebar.js",
