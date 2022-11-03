@@ -14,7 +14,7 @@ body {
 
 .header {
   grid-area: 1 / 1 / 2 / 3;
-  background-color: grey;
+  background-color: #0d6efd;
   padding: 0 20px;
   display: flex;
   align-items: center;
@@ -22,11 +22,13 @@ body {
 
 .header h1 {
   font-size: 2.5rem;
+  color: #fff;
+  font-weight: 700;
 }
 
 .sidebar {
-  background-color: lightgrey;
-  padding: 10px;
+  background-color: #edfbfe;
+  padding: 10px 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;

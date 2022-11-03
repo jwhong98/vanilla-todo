@@ -26,7 +26,7 @@ submitButton.addEventListener("click", (e) => {
   let description = document.getElementById("description").value;
   let dueDate = document.getElementById("dueDate").value;
   let priority = document.querySelector('input[name="prio"]:checked').value;
-  let newTodo = createTodo(title, description, dueDate, priority);
+  let newTodo = createTodo(title, description, dueDate, priority, project);
   todoList.push(newTodo);
   displayTodos(todoList);
   document.getElementById("form").reset(); //clear form inputs
