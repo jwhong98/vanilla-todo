@@ -17,7 +17,7 @@ const todoList = [];
 const home = projectHandler.createProject("home");
 projectHandler.addNewProject(home);
 console.log(projectHandler.getAllProjects());
-const selectedProject = projectHandler
+let selectedProject = projectHandler
   .getAllProjects()
   .find((el) => el.title === projectHandler.getCurrentProject());
 console.log(selectedProject);
@@ -70,4 +70,10 @@ newProjectButton.addEventListener("click", (e) => {
   projectHandler
     .getAllProjects()
     .map((el) => projectContainer.appendChild(projectCard(el)));
+
+  selectedProject = projectHandler
+    .getAllProjects()
+    .find((el) => el.title === projectHandler.getCurrentProject());
+
+  displayTodos(selectedProject.todos);
 });

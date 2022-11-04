@@ -1,6 +1,7 @@
 import createTodoCard from "./createTodoCard";
 
 export default function displayTodos(project) {
+  console.log(project);
   const display = document.querySelector("#display");
   while (display.firstChild) {
     display.removeChild(display.firstChild);
