@@ -16,11 +16,9 @@ const todoList = [];
 
 const home = projectHandler.createProject("home");
 projectHandler.addNewProject(home);
-console.log(projectHandler.getAllProjects());
 let selectedProject = projectHandler
   .getAllProjects()
   .find((el) => el.title === projectHandler.getCurrentProject());
-console.log(selectedProject);
 
 const form = document.querySelector(".formContainer");
 const addTodo = document.querySelector(".addTodo");
